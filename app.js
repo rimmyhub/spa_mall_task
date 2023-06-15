@@ -12,7 +12,6 @@ app.get('/', (req, res) => {
 });
 
 app.use(express.json());
-// localhost:3000/api
 app.use("/", [postsRouter, commentsRouter]);
 
 app.listen(port, () => {

@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 
 app.use(express.json());
 // localhost:3000/api
-app.use("/api", [postsRouter, commentsRouter]);
+app.use("/", [postsRouter, commentsRouter]);
 
 app.listen(port, () => {
   console.log(port, '포트로 서버가 열렸어요!');

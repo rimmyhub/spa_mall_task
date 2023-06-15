@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Comments = require("../schemas/comments.js");
 
-// 댓글 목록 조회 API
+// 댓글 목록 조회
 router.get("/comments/:postId", async (req, res) => {
   const { postId } = req.params;
   const data = await Comments.find({ postId });
